@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>DV Backend Shopping Cart Challenge</title>
+    <link rel="stylesheet" th:href="@{/bootstrap.min.css}"></link>
+</head>
+<body>
+
+<div class="with:80%">
+    <h1>Order</h1>
+    <h3><span th:text="${order}"/></h3>
+
+    <br>
+    <a href="/home" th:href="@{/home}">Home</a>
+</div>
+</body>
+</html>

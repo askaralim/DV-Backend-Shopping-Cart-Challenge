@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>DV Backend Shopping Cart Challenge</title>
+    <link rel="stylesheet" th:href="@{/bootstrap.min.css}"></link>
+</head>
+<body>
+
+<div class="with:80%">
+    <h1>My Cart</h1>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <td>Item Name</td>
+            <td>Quantity</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="item : ${items}">
+            <td th:text="${item.key.name}">Name</td>
+            <td th:text="${item.value}">Quantity</td>
+        </tr>
+        </tbody>
+    </table>
+    <br>
+    <a href="/checkout" th:href="@{/checkout}">Checkout</a>
+    <br>
+    <a href="/home" th:href="@{/home}">Go Back</a>
+</div>
+</body>
+</html>
